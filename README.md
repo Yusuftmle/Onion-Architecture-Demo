@@ -75,6 +75,16 @@ cd your-repo
     <li><b>MediatR</b></li>
     <li><b>AutoMapper</b></li>
     <li><b>CQRS Pattern</b></li>
+
+
+    <h2>📖 References</h2>
+<ul>
+  <li><a href="https://www.amazon.com/Clean-Architecture-Craftsmans-Software-Structure/dp/0134494164" target="_blank">Clean Architecture Principles</a></li>
+  <li><a href="https://martinfowler.com/bliki/CQRS.html" target="_blank">CQRS Design Pattern</a></li>
+  <li><a href="https://github.com/jbogard/MediatR" target="_blank">MediatR Documentation</a></li>
+  <li><a href="https://docs.automapper.org/en/stable/" target="_blank">AutoMapper Documentation</a></li>
+</ul>
+
   </ul>
 
   <hr>
