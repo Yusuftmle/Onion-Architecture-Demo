@@ -76,6 +76,7 @@ cd your-repo
     <li><b>AutoMapper</b></li>
     <li><b>CQRS Pattern</b></li>
 
+  </ul>
 
     <h2>📖 References</h2>
 <ul>
@@ -84,9 +85,6 @@ cd your-repo
   <li><a href="https://github.com/jbogard/MediatR" target="_blank">MediatR Documentation</a></li>
   <li><a href="https://docs.automapper.org/en/stable/" target="_blank">AutoMapper Documentation</a></li>
 </ul>
-
-  </ul>
-
   <hr>
 
   <h2>📜 License</h2>
