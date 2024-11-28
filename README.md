@@ -77,8 +77,8 @@ cd your-repo
     <li><b>CQRS Pattern</b></li>
 
   </ul>
-
-    <h2>📖 References</h2>
+  
+ <h2>📖 References</h2>
 <ul>
   <li><a href="https://www.amazon.com/Clean-Architecture-Craftsmans-Software-Structure/dp/0134494164" target="_blank">Clean Architecture Principles</a></li>
   <li><a href="https://martinfowler.com/bliki/CQRS.html" target="_blank">CQRS Design Pattern</a></li>
