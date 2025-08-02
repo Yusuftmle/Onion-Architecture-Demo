@@ -1,90 +1,68 @@
-<h1>🏗️ Clean Architecture Demo</h1>
-  <p>This repository demonstrates a <b>Clean Architecture</b> implementation using the <b>CQRS Pattern</b>, <b>MediatR Pattern</b>, and <b>AutoMapper</b>. The project showcases a modular and scalable solution for modern application development.</p>
+# 🏗️ Clean Architecture Demo
 
-  <hr>
+Bu proje, **Clean Architecture**, **CQRS**, **MediatR** ve **AutoMapper** desenlerini uygulayarak modern, ölçeklenebilir ve sürdürülebilir bir yazılım geliştirme mimarisini göstermektedir.
 
-  <h2>📂 Project Structure</h2>
-  <h3>1. Domain Layer</h3>
-  <ul>
-    <li>Core business logic and domain models.</li>
-    <li>Contains entities, value objects, and domain services.</li>
-  </ul>
+---
 
-  <h3>2. Application Layer</h3>
-  <ul>
-    <li>Implements <b>CQRS (Command-Query Responsibility Segregation)</b> for separating read and write operations.</li>
-    <li>Handles business rules and use cases.</li>
-    <li>Integrates with <b>MediatR</b> for reducing dependencies.</li>
-  </ul>
+## 📂 Katmanlı Mimari Yapı
 
-  <h3>3. Infrastructure Layer</h3>
-  <ul>
-    <li>Manages external concerns such as database access, third-party services, and file systems.</li>
-    <li>Contains data access implementations (e.g., EF Core).</li>
-  </ul>
+### 1. Domain Layer
+- Core business logic ve domain modelleri.
+- Entity, ValueObject ve domain service tanımları içerir.
 
-  <h3>4. Presentation Layer</h3>
-  <ul>
-    <li>The entry point for user interaction (e.g., Web API, UI).</li>
-    <li>Interfaces directly with the <b>Application Layer</b>.</li>
-  </ul>
+### 2. Application Layer
+- **CQRS (Command-Query Responsibility Segregation)** uygulanmıştır.
+- Komut ve sorgu işlemleri birbirinden ayrılarak esnek ve okunabilir hale getirilmiştir.
+- **MediatR** ile handler'lar loosely coupled hâle getirilmiştir.
+- DTO, Validator ve AutoMapper profilleri de bu katmandadır.
 
-  <hr>
+### 3. Infrastructure Layer
+- Veritabanı bağlantısı, dış servis entegrasyonları, e‑posta servisleri vb. içerir.
+- **Entity Framework Core** ve/veya **Dapper** kullanılır.
 
-  <h2>✨ Key Features</h2>
-  <h3>CQRS Pattern</h3>
-  <ul>
-    <li>Separation of <b>Command</b> and <b>Query</b> responsibilities for better scalability and maintainability.</li>
-    <li>Commands perform state-changing actions, while Queries retrieve data without altering the state.</li>
-  </ul>
+### 4. API Layer
+- RESTful endpoint'lerin tanımlandığı sunum katmanıdır.
+- Kullanıcıların dışarıdan erişeceği tek katmandır.
 
-  <h3>MediatR Pattern</h3>
-  <ul>
-    <li>A mediator-based approach for implementing <b>request-response</b> pipelines.</li>
-    <li>Simplifies communication between application components.</li>
-  </ul>
+---
 
-  <h3>AutoMapper</h3>
-  <ul>
-    <li>Object-object mapping for seamless transformation between DTOs and domain models.</li>
-  </ul>
+## 🚀 Özellikler
 
-  <hr>
+- ✅ Katmanlı mimari ve sorumluluk ayrımı
+- ✅ CQRS ve MediatR ile modern yapı
+- ✅ AutoMapper ile hızlı veri eşleme
+- ✅ FluentValidation ile veri doğrulama
+- ✅ Unit test'e uygun, sade ve modüler yapı
+- ✅ SOLID prensiplerine uygun kod
 
-  <h2>⚙️ Setup</h2>
-  <ol>
-    <li>Clone the repository:
-      <pre><code>git clone https://github.com/your-username/your-repo.git
-cd your-repo
-      </code></pre>
-    </li>
-    <li>Install dependencies:
-      <pre><code>dotnet restore</code></pre>
-    </li>
-    <li>Run the application:
-      <pre><code>dotnet run</code></pre>
-    </li>
-  </ol>
+---
 
-  <hr>
+## 🧪 Kullanılan Teknolojiler
 
-  <h2>🛠️ Technologies Used</h2>
-  <ul>
-    <li><b>.NET 8</b></li>
-    <li><b>Entity Framework Core</b></li>
-    <li><b>MediatR</b></li>
-    <li><b>AutoMapper</b></li>
-    <li><b>CQRS Pattern</b></li>
+| Alan               | Teknoloji/Tool              |
+|--------------------|-----------------------------|
+| Backend Framework  | ASP.NET Core                |
+| ORM                | Entity Framework Core, Dapper |
+| Pattern            | CQRS, MediatR, AutoMapper   |
+| Validasyon         | FluentValidation            |
+| Veritabanı         | SQL Server / PostgreSQL     |
+| Mesajlaşma (Ops.)  | RabbitMQ (varsa)            |
 
-  </ul>
-  
- <h2>📖 References</h2>
-<ul>
-  <li><a href="https://www.amazon.com/Clean-Architecture-Craftsmans-Software-Structure/dp/0134494164" target="_blank">Clean Architecture Principles</a></li>
-  <li><a href="https://martinfowler.com/bliki/CQRS.html" target="_blank">CQRS Design Pattern</a></li>
-  <li><a href="https://github.com/jbogard/MediatR" target="_blank">MediatR Documentation</a></li>
-  <li><a href="https://docs.automapper.org/en/stable/" target="_blank">AutoMapper Documentation</a></li>
-</ul>
-  <hr>
+---
 
-  
+## 🛠️ Kurulum
+
+```bash
+# 1. Reposu klonla
+git clone https://github.com/Yusuftmle/CleanArchitectureDemo.git
+
+# 2. Gerekli NuGet paketlerini yükle
+dotnet restore
+
+# 3. Veritabanı ayarlarını güncelle (appsettings.json)
+
+# 4. Database migration uygula (örnek)
+dotnet ef database update
+
+# 5. Uygulamayı başlat
+dotnet run
