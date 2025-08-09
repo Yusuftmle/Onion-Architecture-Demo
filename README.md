@@ -1,68 +1,75 @@
 # 🏗️ Clean Architecture Demo
 
-Bu proje, **Clean Architecture**, **CQRS**, **MediatR** ve **AutoMapper** desenlerini uygulayarak modern, ölçeklenebilir ve sürdürülebilir bir yazılım geliştirme mimarisini göstermektedir.
+This project demonstrates a modern, scalable, and maintainable software development architecture by implementing **Clean Architecture**, **CQRS**, **MediatR**, and **AutoMapper** patterns.
 
 ---
 
-## 📂 Katmanlı Mimari Yapı
+## 📂 Layered Architecture Structure
 
 ### 1. Domain Layer
-- Core business logic ve domain modelleri.
-- Entity, ValueObject ve domain service tanımları içerir.
+- Contains core business logic and domain models.  
+- Defines entities, value objects, and domain services.
 
 ### 2. Application Layer
-- **CQRS (Command-Query Responsibility Segregation)** uygulanmıştır.
-- Komut ve sorgu işlemleri birbirinden ayrılarak esnek ve okunabilir hale getirilmiştir.
-- **MediatR** ile handler'lar loosely coupled hâle getirilmiştir.
-- DTO, Validator ve AutoMapper profilleri de bu katmandadır.
+- Implements **CQRS (Command-Query Responsibility Segregation)**.  
+- Separates command and query operations for flexibility and readability.  
+- Uses **MediatR** for loosely coupled handlers.  
+- Contains DTOs, validators, and AutoMapper profiles.
 
 ### 3. Infrastructure Layer
-- Veritabanı bağlantısı, dış servis entegrasyonları, e‑posta servisleri vb. içerir.
-- **Entity Framework Core** ve/veya **Dapper** kullanılır.
+- Includes database connections, external service integrations, email services, etc.  
+- Utilizes **Entity Framework Core** and/or **Dapper**.
 
 ### 4. API Layer
-- RESTful endpoint'lerin tanımlandığı sunum katmanıdır.
-- Kullanıcıların dışarıdan erişeceği tek katmandır.
+- Presentation layer defining RESTful endpoints.  
+- The only layer exposed to external users.
 
 ---
 
-## 🚀 Özellikler
+## 🚀 Features
 
-- ✅ Katmanlı mimari ve sorumluluk ayrımı
-- ✅ CQRS ve MediatR ile modern yapı
-- ✅ AutoMapper ile hızlı veri eşleme
-- ✅ FluentValidation ile veri doğrulama
-- ✅ Unit test'e uygun, sade ve modüler yapı
-- ✅ SOLID prensiplerine uygun kod
-
----
-
-## 🧪 Kullanılan Teknolojiler
-
-| Alan               | Teknoloji/Tool              |
-|--------------------|-----------------------------|
-| Backend Framework  | ASP.NET Core                |
-| ORM                | Entity Framework Core, Dapper |
-| Pattern            | CQRS, MediatR, AutoMapper   |
-| Validasyon         | FluentValidation            |
-| Veritabanı         | SQL Server / PostgreSQL     |
-| Mesajlaşma (Ops.)  | RabbitMQ (varsa)            |
+- ✅ Layered architecture with clear separation of concerns  
+- ✅ Modern design with CQRS and MediatR  
+- ✅ Fast data mapping using AutoMapper  
+- ✅ Data validation with FluentValidation  
+- ✅ Simple, modular, and unit-test friendly structure  
+- ✅ Code following SOLID principles  
 
 ---
 
-## 🛠️ Kurulum
+## 🧪 Technologies Used
+
+| Area              | Technology/Tool           |
+|-------------------|--------------------------|
+| Backend Framework  | ASP.NET Core             |
+| ORM               | Entity Framework Core, Dapper |
+| Patterns          | CQRS, MediatR, AutoMapper |
+| Validation        | FluentValidation         |
+| Database          | SQL Server / PostgreSQL  |
+| Messaging (Optional) | RabbitMQ                |
+
+---
+
+## 🛠️ Setup
 
 ```bash
-# 1. Reposu klonla
+# 1. Clone the repository
 git clone https://github.com/Yusuftmle/CleanArchitectureDemo.git
 
-# 2. Gerekli NuGet paketlerini yükle
+# 2. Restore necessary NuGet packages
 dotnet restore
 
-# 3. Veritabanı ayarlarını güncelle (appsettings.json)
+# 3. Update database settings (appsettings.json)
 
-# 4. Database migration uygula (örnek)
+# 4. Apply database migrations (example)
 dotnet ef database update
 
-# 5. Uygulamayı başlat
+# 5. Run the application
 dotnet run
+
+graph TD
+    A[API Layer] --> B[Application Layer]
+    B --> C[Domain Layer]
+    B --> D[Infrastructure Layer]
+    C --> E[Entities & Domain Services]
+    D --> F[Database, External Services]
