@@ -49,7 +49,15 @@ This project demonstrates a modern, scalable, and maintainable software developm
 | Messaging (Optional) | RabbitMQ                |
 
 ---
+```mermaid
+graph TD
+    A[API Layer] --> B[Application Layer]
+    B --> C[Domain Layer]
+    B --> D[Infrastructure Layer]
+    C --> E[Entities & Domain Services]
+    D --> F[Database, External Services]
 
+```
 ## 🛠️ Setup
 
 ```bash
@@ -66,10 +74,6 @@ dotnet ef database update
 
 # 5. Run the application
 dotnet run
+```
 
-graph TD
-    A[API Layer] --> B[Application Layer]
-    B --> C[Domain Layer]
-    B --> D[Infrastructure Layer]
-    C --> E[Entities & Domain Services]
-    D --> F[Database, External Services]
+
